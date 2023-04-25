@@ -48,5 +48,43 @@ namespace ProcesadorMatematicoTest
 
             Assert.Equal(resultadoEsperado, resultadoReal);
         }
+
+        [Fact]
+        public void CalcularMayor_ConValoresValidos_DevuelveSegundoNumeroMayor()
+        {
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            int primerNumero = 1;
+            int segundoNumero = 2;
+
+            int resultadoReal = procesadorMatematico.CalcularMayor(primerNumero, segundoNumero);
+
+            Assert.Equal(segundoNumero, resultadoReal);
+        }
+
+        [Fact]
+        public void CalcularMayor_ConValoresValidos_DevuelvePrimerNumeroMayor()
+        {
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            int primerNumero = 2;
+            int segundoNumero = 1;
+
+            int resultadoReal = procesadorMatematico.CalcularMayor(primerNumero, segundoNumero);
+
+            Assert.Equal(primerNumero, resultadoReal);
+        }
+
+        [Fact]
+        public void CalcularMayor_ConValoresValidos_Devuelve0()
+        {
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            int primerNumero = 1;
+            int segundoNumero = 1;
+
+            int resultadoReal = procesadorMatematico.CalcularMayor(primerNumero, segundoNumero);
+
+            Assert.Equal(0, resultadoReal);
+        }
+
+
     }
 }

@@ -36,7 +36,7 @@ namespace primer_parcial_unit_test_procesador_matematico
             return (this._resultado < 0);
         }
 
-        public void CalcularMayor(int primerNumero, int segundoNumero)
+        public int CalcularMayor(int primerNumero, int segundoNumero)
         {
             if (primerNumero > segundoNumero)
             {
@@ -46,10 +46,12 @@ namespace primer_parcial_unit_test_procesador_matematico
             {
                 this._resultado = segundoNumero;
             }
-            else
+            else if (primerNumero == segundoNumero)
             {
-                this._resultado = segundoNumero;
+                return 0;
             }
+
+            return this._resultado;
         }
     }
 }
