@@ -10,11 +10,9 @@ namespace ProcesadorMatematicoTest
         {
             ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
             int resultadoEsperado = 10;
-
-            //Act
+           
             int resultadoReal = procesadorMatematico.Sumar(5, 5);
-
-            //Assert
+    
             Assert.Equal(resultadoEsperado, resultadoReal);
         }
 
@@ -24,10 +22,30 @@ namespace ProcesadorMatematicoTest
             ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
             int resultadoEsperado = 0;
 
-            //Act
             int resultadoReal = procesadorMatematico.Sumar(5, -5);
 
-            //Assert
+            Assert.Equal(resultadoEsperado, resultadoReal);
+        }
+
+        [Fact]
+        public void Dividir_ConValoresValidos_DevuelveResultado()
+        {
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            int resultadoEsperado = 0;
+
+            int resultadoReal = procesadorMatematico.Dividir(8, -2);
+
+            Assert.Equal(resultadoEsperado, resultadoReal);
+        }
+
+        [Fact]
+        public void Dividir_ConValoresInvalidos_Devuelve0()
+        {
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            int resultadoEsperado = 0;
+
+            int resultadoReal = procesadorMatematico.Dividir(5, -5);
+
             Assert.Equal(resultadoEsperado, resultadoReal);
         }
     }

@@ -16,18 +16,20 @@ namespace primer_parcial_unit_test_procesador_matematico
             if (this.EsNegativo())
             {
                 this._resultado = 0;
-                return this._resultado;
+
             }
             return this._resultado;
         }
 
-        public void Dividir(int dividendo, int divisor)
+        public int Dividir(int dividendo, int divisor)
         {
             this._resultado = dividendo / divisor;
             if (this.EsNegativo())
             {
                 this._resultado = 0;
+           
             }
+            return this._resultado;
         }
         private bool EsNegativo()
         {
